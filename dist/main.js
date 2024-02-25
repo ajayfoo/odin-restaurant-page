@@ -10,6 +10,26 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/aboutSetup.js":
+/*!***************************!*\
+  !*** ./src/aboutSetup.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getNewAboutContent: () => (/* binding */ getNewAboutContent)\n/* harmony export */ });\nconst getNewAboutContent = () => {\n    const aboutContent = document.createElement('div');\n    const h1 = document.createElement('h1');\n    h1.textContent = 'About';\n    const p = document.createElement('p');\n    p.textContent = 'This is the about page';\n    aboutContent.append(h1, p);\n    return aboutContent;\n};\n\n\n\n//# sourceURL=webpack://top-restaurant-page/./src/aboutSetup.js?");
+
+/***/ }),
+
+/***/ "./src/contactSetup.js":
+/*!*****************************!*\
+  !*** ./src/contactSetup.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getNewContactContent: () => (/* binding */ getNewContactContent)\n/* harmony export */ });\nconst getNewContactContent = () => {\n    const contactContent = document.createElement('div');\n    const h1 = document.createElement('h1');\n    h1.textContent = 'Contact';\n    const p = document.createElement('p');\n    p.textContent = 'This is the contact page';\n    contactContent.append(h1, p);\n    return contactContent;\n};\n\n\n\n//# sourceURL=webpack://top-restaurant-page/./src/contactSetup.js?");
+
+/***/ }),
+
 /***/ "./src/homeSetup.js":
 /*!**************************!*\
   !*** ./src/homeSetup.js ***!
@@ -26,7 +46,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homeSetup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homeSetup */ \"./src/homeSetup.js\");\n\nconst content = document.getElementById('content');\nconst newHomeContent = (0,_homeSetup__WEBPACK_IMPORTED_MODULE_0__.getNewHomeContent)();\n\ncontent.appendChild(newHomeContent);\n\n//# sourceURL=webpack://top-restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homeSetup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homeSetup */ \"./src/homeSetup.js\");\n/* harmony import */ var _menuSetup__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menuSetup */ \"./src/menuSetup.js\");\n/* harmony import */ var _contactSetup__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./contactSetup */ \"./src/contactSetup.js\");\n/* harmony import */ var _aboutSetup__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./aboutSetup */ \"./src/aboutSetup.js\");\n\n\n\n\n\nconst navBar = document.querySelector('body>header>nav');\nconst content = document.getElementById('content');\nconst homeContent = (0,_homeSetup__WEBPACK_IMPORTED_MODULE_0__.getNewHomeContent)();\nconst menuContent = (0,_menuSetup__WEBPACK_IMPORTED_MODULE_1__.getNewMenuContent)();\nconst contactContent = (0,_contactSetup__WEBPACK_IMPORTED_MODULE_2__.getNewContactContent)();\nconst aboutContent = (0,_aboutSetup__WEBPACK_IMPORTED_MODULE_3__.getNewAboutContent)();\n\nconst getContentFor = (tabText) => {\n    switch (tabText.toLowerCase()) {\n        case 'menu': return menuContent;\n        case 'contact': return contactContent;\n        case 'about': return aboutContent;\n        default: return homeContent;\n    }\n};\n\nconst setupEventListenersForTabs = () => {\n    for (const btn of navBar.children) {\n        btn.addEventListener('click', () => {\n            const newContentItem = getContentFor(btn.textContent);\n            content.replaceChildren(newContentItem);\n        });\n    }\n}\n\ncontent.replaceChildren(homeContent);\nsetupEventListenersForTabs();\n\n//# sourceURL=webpack://top-restaurant-page/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/menuSetup.js":
+/*!**************************!*\
+  !*** ./src/menuSetup.js ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getNewMenuContent: () => (/* binding */ getNewMenuContent)\n/* harmony export */ });\nconst getNewMenuContent = () => {\n    const menuContent = document.createElement('div');\n    const h1 = document.createElement('h1');\n    h1.textContent = 'Menu';\n    const p = document.createElement('p');\n    p.textContent = 'This is the menu page';\n    menuContent.append(h1, p);\n    return menuContent;\n};\n\n\n\n//# sourceURL=webpack://top-restaurant-page/./src/menuSetup.js?");
 
 /***/ })
 

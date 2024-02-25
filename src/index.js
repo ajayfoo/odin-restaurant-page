@@ -1,5 +1,32 @@
 import { getNewHomeContent } from "./homeSetup";
-const content = document.getElementById('content');
-const newHomeContent = getNewHomeContent();
+import { getNewMenuContent } from "./menuSetup";
+import { getNewContactContent } from "./contactSetup";
+import { getNewAboutContent } from "./aboutSetup";
 
-content.appendChild(newHomeContent);
+const navBar = document.querySelector('body>header>nav');
+const content = document.getElementById('content');
+const homeContent = getNewHomeContent();
+const menuContent = getNewMenuContent();
+const contactContent = getNewContactContent();
+const aboutContent = getNewAboutContent();
+
+const getContentFor = (tabText) => {
+    switch (tabText.toLowerCase()) {
+        case 'menu': return menuContent;
+        case 'contact': return contactContent;
+        case 'about': return aboutContent;
+        default: return homeContent;
+    }
+};
+
+const setupEventListenersForTabs = () => {
+    for (const btn of navBar.children) {
+        btn.addEventListener('click', () => {
+            const newContentItem = getContentFor(btn.textContent);
+            content.replaceChildren(newContentItem);
+        });
+    }
+}
+
+content.replaceChildren(homeContent);
+setupEventListenersForTabs();
