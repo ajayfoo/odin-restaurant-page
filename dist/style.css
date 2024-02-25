@@ -9,6 +9,23 @@
     box-sizing: inherit;
 }
 
-#content>h1+img {
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header>nav:only-of-type {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    justify-content: center;
+    gap: 15px;
+}
+
+header>nav:only-of-type>button {
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+#content>div>h1+img {
     width: 420px;
 }

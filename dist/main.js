@@ -16,7 +16,7 @@
   \**************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   setup: () => (/* binding */ setup)\n/* harmony export */ });\nconst content = document.getElementById('content');\nconst setup = () => {\n    const h1 = document.createElement('h1');\n    h1.textContent = 'Magnificent Restaurant';\n    const img = document.createElement('img');\n    img.src = \"images/hero.jpg\";\n    img.alt = \"interior of the restaurant\";\n    const h2 = document.createElement('h2');\n    h2.textContent = \"What's special about us?\"\n    const p = document.createElement('p');\n    p.textContent = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente praesentium reprehenderit ab quo\n            perspiciatis deleniti earum ratione! Recusandae hic reiciendis accusantium consequuntur, repellendus\n            obcaecati possimus cumque praesentium sequi modi velit asperiores eligendi odit ullam.`;\n    content.append(h1, img, h2, p);\n};\n\n\n\n//# sourceURL=webpack://top-restaurant-page/./src/homeSetup.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   getNewHomeContent: () => (/* binding */ getNewHomeContent)\n/* harmony export */ });\nconst getNewHomeContent = () => {\n    const homeContent = document.createElement('div');\n    const h1 = document.createElement('h1');\n    h1.textContent = 'Magnificent Restaurant';\n    const img = document.createElement('img');\n    img.src = \"images/hero.jpg\";\n    img.alt = \"interior of the restaurant\";\n    const h2 = document.createElement('h2');\n    h2.textContent = \"What's special about us?\"\n    const p = document.createElement('p');\n    p.textContent = `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente praesentium reprehenderit ab quo\n            perspiciatis deleniti earum ratione! Recusandae hic reiciendis accusantium consequuntur, repellendus\n            obcaecati possimus cumque praesentium sequi modi velit asperiores eligendi odit ullam.`;\n    homeContent.append(h1, img, h2, p);\n    return homeContent;\n};\n\n\n\n//# sourceURL=webpack://top-restaurant-page/./src/homeSetup.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homeSetup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homeSetup */ \"./src/homeSetup.js\");\n\n(0,_homeSetup__WEBPACK_IMPORTED_MODULE_0__.setup)();\n\n//# sourceURL=webpack://top-restaurant-page/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _homeSetup__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./homeSetup */ \"./src/homeSetup.js\");\n\nconst content = document.getElementById('content');\nconst newHomeContent = (0,_homeSetup__WEBPACK_IMPORTED_MODULE_0__.getNewHomeContent)();\n\ncontent.appendChild(newHomeContent);\n\n//# sourceURL=webpack://top-restaurant-page/./src/index.js?");
 
 /***/ })
 
