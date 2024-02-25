@@ -1,0 +1,13 @@
+{
+  "name": "top-restaurant-page",
+  "version": "1.0.0",
+  "description": "The Odin Project's Restaurant Page Project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch"
+  },
+  "devDependencies": {
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4"
+  }
+}
